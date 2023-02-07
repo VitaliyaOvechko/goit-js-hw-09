@@ -16,3 +16,83 @@ img {
   display: block;
   max-width: 100%;
 }
+
+
+/* color-switcher */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.switcher-container {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+
+.start-btn {
+  padding: 20px 30px;
+  border-radius: 4px;
+  border: 1px solid #bf9706;
+  font-weight: 700;
+  font-size: 28px;
+  background-color: #228946;
+  cursor: pointer;
+}
+
+.stop-btn{
+  padding: 20px 30px;
+  border-radius: 4px;
+  border: 1px solid #bf9706;
+  font-weight: 700;
+  font-size: 28px;
+  background-color: #b32626;
+  cursor: pointer;
+}
+
+
+/* ----timer----- */
+
+.timer-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.timer-start-btn {
+  padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid;
+    color:#000000;
+    background-color: #e9cf59;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .flatpickr-input {
+    padding: 5px;
+    border-radius: 4px;
+    font-family: inherit;
+    font-weight: 600;
+  }
+
+.timer {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.field {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.value {
+    font-weight: 900;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #bf9706;
+}
