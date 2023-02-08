@@ -8,7 +8,15 @@ stopButton: document.querySelector('[data-stop]'),
 body: document.querySelector('body'),
 }
 
+let timerId = 0;
 refs.startButton.addEventListener('click', changeColor);
+
+// const timerId = setInterval(changeColor, 1000);
+    
+// function changeColor() {
+//     refs.body.style.backgroundColor = getRandomHexColor();
+//     onDisabledBtn(true);
+// }
 
 function changeColor() {
     timerId = setInterval(() => {
