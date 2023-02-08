@@ -12,6 +12,7 @@ dataSeconds: document.querySelector('[data-seconds]'),
 }
 
 let selectedDate = 0;
+let intervalId = 0;
 
 onDisabledBtn(true);
 
