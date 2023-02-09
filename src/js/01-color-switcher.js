@@ -18,25 +18,38 @@ refs.startButton.addEventListener('click', changeColor);
 //     onDisabledBtn(true);
 // }
 
+onDisabledStopBtn(true);
+
 function changeColor() {
     timerId = setInterval(() => {
     refs.body.style.backgroundColor = getRandomHexColor();
     }, 1000);
-    onDisabledBtn(true);
+    onDisabledStartBtn(true);
+    onDisabledStopBtn(false);
 }
 
 refs.stopButton.addEventListener('click', stopChangeColor);
 
 function stopChangeColor(){
     clearTimeout(timerId);
-    onDisabledBtn(false);
+    onDisabledStopBtn(true);
+    onDisabledStartBtn(false);
 }
 
-function onDisabledBtn(onStart) {
+function onDisabledStartBtn(onStart) {
     if (onStart) {
         refs.startButton.setAttribute('disabled', 'true');
     }
     else {
         refs.startButton.removeAttribute('disabled');
+    }
+}
+
+function onDisabledStopBtn(onStop) {
+    if (onStop) {
+        refs.stopButton.setAttribute('disabled', 'true');
+    }
+    else {
+        refs.stopButton.removeAttribute('disabled');
     }
 }

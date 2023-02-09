@@ -50,17 +50,17 @@ refs.startBtn.addEventListener('click', onStartBtn);
 
 function onStartBtn() {
     intervalId = setInterval(() => {
-        const diff = selectedDate - new Date();
-        // console.log(diff);
-        // console.log(selectedDate);
-        
-        convertMs(diff);
-        // console.log(convertMs(diff));
-
-        showDade(diff);
-        stopTimer(diff);
-    }
-        , 1000);
+       let diff = selectedDate - new Date();
+  
+        if (diff > 0) {
+            convertMs(diff);
+            showDade(diff);
+        }
+        else {
+            stopTimer();
+                }
+            
+} , 1000);
 };
 
 function convertMs(ms) {
@@ -96,9 +96,14 @@ function addLeadingZero(value) {
 
 // Таймер повинен зупинятися,
 // коли дійшов до кінцевої дати, тобто 00: 00: 00: 00.
-function stopTimer(targetTime) {
-    if (targetTime < 1000) {
+function stopTimer() {
         clearInterval(intervalId);
         Notiflix.Notify.success('Target date has arrived');
-    }
 }
+
+// function stopTimer(targetTime) {
+//     if (targetTime < 1000) {
+//         clearInterval(intervalId);
+//         Notiflix.Notify.success('Target date has arrived');
+//     }
+// }
